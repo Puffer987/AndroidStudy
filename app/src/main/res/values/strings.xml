@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Adolf</string>
+    <string name="button">button</string>
+    <string name="about">Abuot</string>
+    <string name="version_info">Version: %s \\n Designer: Adolf</string>
+    <string name="version_name" translatable="false">1.1.0</string>
+</resources>
