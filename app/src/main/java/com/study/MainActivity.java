@@ -83,6 +83,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
                 break;
             }
+            case R.id.list_view2: {
+                Intent i = new Intent(this, A11ListViewObject.class);
+                startActivity(i);
+                break;
+            }
         }
         return true;
     }

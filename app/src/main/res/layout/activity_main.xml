@@ -45,6 +45,7 @@
         android:layout_weight="1"
         android:onClick="onClickBtn"
         android:text="动态布局" />
+
     <Button
         android:id="@+id/file"
         android:layout_width="match_parent"
@@ -52,6 +53,7 @@
         android:layout_weight="1"
         android:onClick="onClickBtn"
         android:text="文件创建" />
+
     <Button
         android:id="@+id/storage"
         android:layout_width="match_parent"
@@ -67,6 +69,7 @@
         android:layout_weight="1"
         android:onClick="onClickBtn"
         android:text="动态布局2" />
+
     <Button
         android:id="@+id/list_view"
         android:layout_width="match_parent"
@@ -75,6 +78,13 @@
         android:onClick="onClickBtn"
         android:text="ListView" />
 
+    <Button
+        android:id="@+id/list_view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="onClickBtn"
+        android:text="ListView2" />
 
 
 </LinearLayout>

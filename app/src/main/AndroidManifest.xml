@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".a11ListView"></activity>
+        <activity android:name=".A11ListViewObject"></activity>
+        <activity android:name=".a11ListView" />
         <activity android:name=".a10_dymaticView" />
         <activity android:name=".a09_storage" />
         <activity android:name=".a08_file" />
