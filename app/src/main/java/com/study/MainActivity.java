@@ -68,6 +68,21 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
                 break;
             }
+            case R.id.storage: {
+                Intent i = new Intent(this, a09_storage.class);
+                startActivity(i);
+                break;
+            }
+            case R.id.dym2: {
+                Intent i = new Intent(this, a10_dymaticView.class);
+                startActivity(i);
+                break;
+            }
+            case R.id.list_view: {
+                Intent i = new Intent(this, a11ListView.class);
+                startActivity(i);
+                break;
+            }
         }
         return true;
     }

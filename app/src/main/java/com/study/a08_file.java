@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,67 +17,47 @@ import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
-public class a08_file extends AppCompatActivity implements View.OnClickListener{
+public class a08_file extends AppCompatActivity {
 
-    private EditText editname;
-    private EditText editdetail;
-    private Button btnsave;
-    private Button btnclean;
-    private Button btnread;
-    private Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        mContext = getApplicationContext();
-        bindViews();
+        setContentView(R.layout.activity_a08_file);
     }
 
-    private void bindViews() {
-        editname = (EditText) findViewById(R.id.edittitle);
-        editdetail = (EditText) findViewById(R.id.editdetail);
-        btnsave = (Button) findViewById(R.id.btnsave);
-        btnclean = (Button) findViewById(R.id.btnclean);
-        btnread = (Button) findViewById(R.id.btnread);
-
-        btnsave.setOnClickListener(this);
-        btnclean.setOnClickListener(this);
-        btnread.setOnClickListener(this);
+    public boolean isExternalStorageWritable() {
+        String state = Environment.getExternalStorageState();
+        if (Environment.MEDIA_MOUNTED.equals(state)) {
+            return true;
+        }
+        return false;
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.btnclean:
-                editdetail.setText("");
-                editname.setText("");
-                break;
-            case R.id.btnsave:
-                String filename = editname.getText().toString();
-                String filedetail = editdetail.getText().toString();
-                SDFileHelper sdHelper = new SDFileHelper(mContext);
-                try
-                {
-                    sdHelper.savaFileToSD(filename, filedetail);
-                    Toast.makeText(getApplicationContext(), "数据写入成功", Toast.LENGTH_SHORT).show();
+    public void createFile(View view) {
+        if (isExternalStorageWritable()) {
+            System.out.println("有权限");
+
+            try {
+                switch (view.getId()) {
+                    case R.id.externalStoragePublic: {
+                        File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
+                                "123.png");
+                        file.createNewFile();
+                    }
+                    case R.id.externalFiles: {
+                        new File(getExternalFilesDir(null), "123").createNewFile();
+                    }
+                    case R.id.externalCache: {
+                        new File(getExternalCacheDir(), "321").createNewFile();
+                    }
                 }
-                catch(Exception e){
-                    e.printStackTrace();
-                    Toast.makeText(getApplicationContext(), "数据写入失败", Toast.LENGTH_SHORT).show();
-                }
-                break;
-            case R.id.btnread:
-                String detail = "";
-                SDFileHelper sdHelper2 = new SDFileHelper(mContext);
-                try
-                {
-                    String filename2 = editname.getText().toString();
-                    detail = sdHelper2.readFromSD(filename2);
-                }
-                catch(IOException e){e.printStackTrace();}
-                Toast.makeText(getApplicationContext(), detail, Toast.LENGTH_SHORT).show();
-                break;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            System.out.println("创建成功");
+        } else {
+            System.out.println("没有权限");
         }
     }
 }
