@@ -20,6 +20,8 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/gv_item_img"
-        android:onClick="btn_del"/>
+        android:focusable="false"
+        android:text="删除"
+       />
 
 </RelativeLayout>

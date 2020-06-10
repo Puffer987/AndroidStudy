@@ -8,13 +8,14 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.study.R;
 import com.study.help.A12GVUser;
 
 import java.util.List;
 
-public class A12GridViewAdapter extends BaseAdapter {
+public class A12GridViewAdapter extends BaseAdapter implements View.OnClickListener {
 
     private Context mContext;
     private LayoutInflater mLayoutInflater;
@@ -60,9 +61,19 @@ public class A12GridViewAdapter extends BaseAdapter {
         }
 
         viewHolder.avatar.setImageResource(R.mipmap.ic_launcher);
+        viewHolder.btn.setTag(R.id.tag_gv_btn,position);
+        viewHolder.btn.setOnClickListener(this);
         viewHolder.name.setText(mUserInfos.get(position).getName());
-        viewHolder.btn.setText(position+"");
         return convertView;
+    }
+
+    @Override
+    public void onClick(View v) {
+        int position = (int) v.getTag(R.id.tag_gv_btn);
+
+        mUserInfos.remove(position);
+        notifyDataSetChanged();
+        Toast.makeText(mContext, "删除了"+position, Toast.LENGTH_SHORT).show();
     }
 
     private class ViewHolder {

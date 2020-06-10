@@ -4,10 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import com.study.R;
 import com.study.adapter.A12GridViewAdapter;
+import com.study.help.A11UserInfo;
 import com.study.help.A12GVUser;
 
 
@@ -33,6 +36,20 @@ public class A12GridView extends AppCompatActivity {
 
         mGridView.setAdapter(viewAdapter);
 
+        mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(A12GridView.this, "我点击Item：" + position, Toast.LENGTH_SHORT).show();
+            }
+        });
+        mGridView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(A12GridView.this, "长按了Item："+position, Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+
     }
 
     public List<A12GVUser> initUserInfo() {
@@ -51,7 +68,6 @@ public class A12GridView extends AppCompatActivity {
         viewAdapter.setmUserInfos(mUsers);
         viewAdapter.notifyDataSetChanged();
     }
-
 
 
 }
