@@ -8,6 +8,19 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.study.activity.A11ListViewObject;
+import com.study.activity.A12GridView;
+import com.study.activity.a01_calculator;
+import com.study.activity.a02_bigger;
+import com.study.activity.a03_about;
+import com.study.activity.a05_vibrate;
+import com.study.activity.a06_pcMuscle;
+import com.study.activity.a07_dynamicLayout;
+import com.study.activity.a08_file;
+import com.study.activity.a09_storage;
+import com.study.activity.a10_dymaticView;
+import com.study.activity.a11ListView;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -88,6 +101,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
                 break;
             }
+            case R.id.grid_view: {
+                Intent i = new Intent(this, A12GridView.class);
+                startActivity(i);
+                break;
+            }
+//            case R.id.scroll_view: {
+//                Intent i = new Intent(this, A11ListViewObject.class);
+//                startActivity(i);
+//                break;
+//            }
         }
         return true;
     }

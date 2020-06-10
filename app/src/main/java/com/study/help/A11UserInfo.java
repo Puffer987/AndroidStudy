@@ -1,4 +1,4 @@
-package com.study;
+package com.study.help;
 
 public class A11UserInfo {
     private String username;

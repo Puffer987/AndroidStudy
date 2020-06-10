@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".a05_vibrate">
+    tools:context=".activity.a05_vibrate">
 
     <Button
         android:id="@+id/btn_hasVibrator"

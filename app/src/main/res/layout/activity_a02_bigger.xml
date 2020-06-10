@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".a02_bigger">
+    tools:context=".activity.a02_bigger">
 
     <TextView
         android:id="@+id/txv"

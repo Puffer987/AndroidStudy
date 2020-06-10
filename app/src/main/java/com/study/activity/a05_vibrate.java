@@ -1,4 +1,4 @@
-package com.study;
+package com.study.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.study.R;
 
 public class a05_vibrate extends AppCompatActivity implements View.OnClickListener {
 

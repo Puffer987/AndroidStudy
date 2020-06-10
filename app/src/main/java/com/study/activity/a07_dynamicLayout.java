@@ -1,4 +1,4 @@
-package com.study;
+package com.study.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.study.R;
 
 public class a07_dynamicLayout extends AppCompatActivity {
 

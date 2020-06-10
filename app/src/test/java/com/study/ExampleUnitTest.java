@@ -1,7 +1,6 @@
 package com.study;
 
 import org.junit.Test;
-import com.study.a06_pcMuscle;
 
 import static org.junit.Assert.*;
 

@@ -1,4 +1,4 @@
-package com.study;
+package com.study.activity;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -11,7 +11,6 @@ import java.io.OutputStreamWriter;
 import java.io.Writer;
 
 import android.os.Bundle;
-import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +18,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.study.R;
 
 public class a09_storage extends AppCompatActivity {
 

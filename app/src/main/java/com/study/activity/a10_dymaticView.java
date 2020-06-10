@@ -1,4 +1,4 @@
-package com.study;
+package com.study.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.study.R;
 
 import java.util.LinkedList;
 

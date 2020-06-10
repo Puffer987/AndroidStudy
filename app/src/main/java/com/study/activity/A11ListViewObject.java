@@ -1,4 +1,4 @@
-package com.study;
+package com.study.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.study.R;
+import com.study.adapter.A11UserAdapter;
+import com.study.help.A11UserInfo;
 
 import java.util.ArrayList;
 import java.util.List;

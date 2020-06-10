@@ -1,4 +1,4 @@
-package com.study;
+package com.study.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.study.R;
 import com.study.help.SDFileHelper;
 
 import java.io.File;

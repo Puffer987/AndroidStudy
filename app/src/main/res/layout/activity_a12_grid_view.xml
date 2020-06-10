@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.A12GridView">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/gv_btn_add"
+        android:onClick="addItem"
+        android:text="添加"/>
+
+    <GridView
+        android:id="@+id/my_grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/gv_btn_add"
+        android:numColumns="3"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="20dp"/>
+
+</RelativeLayout>

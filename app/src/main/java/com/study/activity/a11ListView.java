@@ -1,4 +1,4 @@
-package com.study;
+package com.study.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,10 +8,13 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.study.R;
+import com.study.adapter.a11LVadapter;
+
 public class a11ListView extends AppCompatActivity {
 
     private ListView mLV;
-    private com.study.a11LVadapter a11LVadapter;
+    private com.study.adapter.a11LVadapter a11LVadapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

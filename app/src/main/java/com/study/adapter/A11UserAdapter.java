@@ -1,4 +1,4 @@
-package com.study;
+package com.study.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,6 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import com.study.help.A11UserInfo;
+import com.study.R;
 
 import java.util.List;
 

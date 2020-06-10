@@ -1,4 +1,4 @@
-package com.study;
+package com.study.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.os.Vibrator;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.study.R;
 
 import java.util.regex.Pattern;
 
