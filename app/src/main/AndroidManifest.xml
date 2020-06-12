@@ -9,12 +9,26 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/adolf_study"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/adolf_study"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.A12GridView"></activity>
+        <activity android:name=".activity.A17ViewPagerTab"></activity>
+        <activity android:name=".activity.A16BottomTab" />
+        <activity android:name=".activity.A15ServiceStartBind" />
+
+        <service
+            android:name=".activity.S15MyService"
+            android:label="@string/app_name" />
+        <service
+            android:name=".activity.S15ServiceStartBind"
+            android:label="BindStart" />
+
+        <activity android:name=".activity.A15Service_player" />
+        <activity android:name=".activity.A14FragmentActivity" />
+        <activity android:name=".activity.A13DiyView" />
+        <activity android:name=".activity.A12GridView" />
         <activity android:name=".activity.A11ListViewObject" />
         <activity android:name=".activity.a11ListView" />
         <activity android:name=".activity.a10_dymaticView" />

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.A15Service_player">
+
+
+    <Button
+        android:id="@+id/play_music"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="playMusic"
+        android:text="播放"/>
+
+    <Button
+        android:id="@+id/pause_music"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="pauseMusic"
+        android:text="暂停"/>
+
+    <Button
+        android:id="@+id/stop_music"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="stopMusic"
+        android:text="停止"/>
+
+</LinearLayout>

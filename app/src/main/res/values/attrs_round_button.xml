@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundButton">
+        <attr name="btn_color" format="color"/>
+        <attr name="add_step" format="integer"/>
+    </declare-styleable>
+</resources>

@@ -10,6 +10,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.study.activity.A11ListViewObject;
 import com.study.activity.A12GridView;
+import com.study.activity.A13DiyView;
+import com.study.activity.A14FragmentActivity;
+import com.study.activity.A15ServiceStartBind;
+import com.study.activity.A15Service_player;
+import com.study.activity.A16BottomTab;
+import com.study.activity.A17ViewPagerTab;
+import com.study.activity.S15MyService;
 import com.study.activity.a01_calculator;
 import com.study.activity.a02_bigger;
 import com.study.activity.a03_about;
@@ -18,7 +25,6 @@ import com.study.activity.a06_pcMuscle;
 import com.study.activity.a07_dynamicLayout;
 import com.study.activity.a08_file;
 import com.study.activity.a09_storage;
-import com.study.activity.a10_dymaticView;
 import com.study.activity.a11ListView;
 
 public class MainActivity extends AppCompatActivity {
@@ -45,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
             }
             break;
         }
-
         return true;
     }
 
@@ -86,11 +91,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
                 break;
             }
-            case R.id.dym2: {
-                Intent i = new Intent(this, a10_dymaticView.class);
-                startActivity(i);
-                break;
-            }
             case R.id.list_view: {
                 Intent i = new Intent(this, a11ListView.class);
                 startActivity(i);
@@ -106,11 +106,37 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
                 break;
             }
-//            case R.id.scroll_view: {
-//                Intent i = new Intent(this, A11ListViewObject.class);
-//                startActivity(i);
-//                break;
-//            }
+            case R.id.diy_view: {
+                Intent i = new Intent(this, A13DiyView.class);
+                startActivity(i);
+                break;
+            }
+            case R.id.fragment_test: {
+                Intent i = new Intent(this, A14FragmentActivity.class);
+                startActivity(i);
+                break;
+            }
+            case R.id.tab_button: {
+                Intent i = new Intent(this, A16BottomTab.class);
+                startActivity(i);
+                break;
+            }
+            case R.id.tab_viewpage: {
+                Intent i = new Intent(this, A17ViewPagerTab.class);
+                startActivity(i);
+                break;
+            }
+            case R.id.player_service: {
+                Intent i = new Intent(this, A15Service_player.class);
+                startActivity(i);
+                break;
+            }
+            case R.id.bind_start_service: {
+                Intent i = new Intent(this, A15ServiceStartBind.class);
+                startActivity(i);
+                break;
+            }
+
         }
         return true;
     }

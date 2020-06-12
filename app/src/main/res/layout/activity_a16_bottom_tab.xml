@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.A16BottomTab">
+
+    <RelativeLayout
+        android:name="com.study.view.F16IHomeFragment"
+        android:id="@+id/i16_tab_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/i16_btn_group"
+        android:layout_marginBottom="5dp" />
+
+    <LinearLayout
+        android:id="@+id/i16_btn_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:gravity="bottom|center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/tab_index"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:onClick="index"
+            android:text="首页"/>
+
+        <Button
+            android:id="@+id/tab_ihome"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:onClick="ihome"
+            android:text="个人中心"/>
+    </LinearLayout>
+</RelativeLayout>

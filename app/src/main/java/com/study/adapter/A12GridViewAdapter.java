@@ -60,7 +60,7 @@ public class A12GridViewAdapter extends BaseAdapter implements View.OnClickListe
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        viewHolder.avatar.setImageResource(R.mipmap.ic_launcher);
+        viewHolder.avatar.setImageResource(R.mipmap.adolf_study);
         viewHolder.btn.setTag(R.id.tag_gv_btn,position);
         viewHolder.btn.setOnClickListener(this);
         viewHolder.name.setText(mUserInfos.get(position).getName());

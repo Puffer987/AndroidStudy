@@ -3,6 +3,7 @@ package com.study.activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -10,7 +11,6 @@ import android.widget.Toast;
 
 import com.study.R;
 import com.study.adapter.A12GridViewAdapter;
-import com.study.help.A11UserInfo;
 import com.study.help.A12GVUser;
 
 
@@ -27,6 +27,11 @@ public class A12GridView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a12_grid_view);
+
+        LayoutInflater layoutInflater = getLayoutInflater();
+        layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+        layoutInflater = LayoutInflater.from(A12GridView.this);
+        layoutInflater.inflate(R.layout.activity_main,null);
 
         mGridView = findViewById(R.id.my_grid_view);
 
