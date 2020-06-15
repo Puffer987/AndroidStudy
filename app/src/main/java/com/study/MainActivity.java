@@ -16,7 +16,7 @@ import com.study.activity.A15ServiceStartBind;
 import com.study.activity.A15Service_player;
 import com.study.activity.A16BottomTab;
 import com.study.activity.A17ViewPagerTab;
-import com.study.activity.S15MyService;
+import com.study.activity.A18TablayoutTab;
 import com.study.activity.a01_calculator;
 import com.study.activity.a02_bigger;
 import com.study.activity.a03_about;
@@ -136,7 +136,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
                 break;
             }
-
+            case R.id.tl_1: {
+                Intent i = new Intent(this, A18TablayoutTab.class);
+                startActivity(i);
+                break;
+            }
+            case R.id.tl_2: {
+                Intent i = new Intent(this, A18TablayoutTab.class);
+                startActivity(i);
+                break;
+            }
         }
         return true;
     }
