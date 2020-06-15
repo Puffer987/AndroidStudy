@@ -13,6 +13,8 @@ import com.study.R;
 
 public class A14FragmentActivity extends AppCompatActivity {
 
+    private A14MyFragment myFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,8 +36,8 @@ public class A14FragmentActivity extends AppCompatActivity {
         width = metrics.widthPixels;
 
         if (width > height) {
-            A14MyFragment f1 = new A14MyFragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.fm_main, f1).commit();
+            myFragment = new A14MyFragment();
+            getSupportFragmentManager().beginTransaction().add(R.id.fm_main, myFragment).commit();
             /* 上面一行等价于下面的
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -45,7 +47,8 @@ public class A14FragmentActivity extends AppCompatActivity {
 
         } else {
             // A14MyFragment f1 = new A14MyFragment();
-            // getSupportFragmentManager().beginTransaction().replace(R.id.fm_main, f1).commit();
+            if (myFragment != null)
+            getSupportFragmentManager().beginTransaction().hide(myFragment).commit();
         }
 
 

@@ -8,5 +8,10 @@
     tools:context=".activity.A14FragmentActivity"
     android:orientation="horizontal">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开启屏幕旋转，旋转屏幕试试"/>
+
 
 </LinearLayout>

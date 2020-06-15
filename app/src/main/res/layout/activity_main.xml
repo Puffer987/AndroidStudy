@@ -116,7 +116,7 @@
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:onClick="onClickBtn"
-                android:text="Fragment" />
+                android:text="Fragment旋转屏幕" />
 
             <LinearLayout
                 android:layout_width="match_parent"

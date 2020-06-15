@@ -29,9 +29,6 @@ public class A17ViewPagerTab extends AppCompatActivity {
         mViewPager = findViewById(R.id.i17_viewpager);
         mFragmentList = new ArrayList<>();
 
-
-
-
         F17TextFragment f1 = new F17TextFragment();
         Bundle bundle = new Bundle();
         bundle.putString("title","我是第一的");
