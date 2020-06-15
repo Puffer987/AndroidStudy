@@ -8,23 +8,26 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/cal"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:onClick="onClickBtn"
-                android:text="计算器" />
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/cal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="计算器" />
 
-            <Button
+                <Button
                 android:id="@+id/bigger"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -32,6 +35,11 @@
                 android:onClick="onClickBtn"
                 android:text="放大" />
 
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
             <Button
                 android:id="@+id/vibrate"
                 android:layout_width="match_parent"
@@ -48,6 +56,8 @@
                 android:onClick="onClickBtn"
                 android:text="振动码转换" />
 
+        </LinearLayout>
+
             <Button
                 android:id="@+id/dynamicLayout"
                 android:layout_width="match_parent"
@@ -56,6 +66,9 @@
                 android:onClick="onClickBtn"
                 android:text="点击添加一列" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
             <Button
                 android:id="@+id/file"
                 android:layout_width="match_parent"
@@ -71,6 +84,8 @@
                 android:layout_weight="1"
                 android:onClick="onClickBtn"
                 android:text="存储文件" />
+
+        </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -101,7 +116,6 @@
                     android:text="GridView" />
             </LinearLayout>
 
-
             <Button
                 android:id="@+id/diy_view"
                 android:layout_width="match_parent"
@@ -118,28 +132,13 @@
                 android:onClick="onClickBtn"
                 android:text="Fragment旋转屏幕" />
 
-
-            <LinearLayout
+            <Button
+                android:id="@+id/tl_2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <Button
-                    android:id="@+id/tl_1"
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:onClick="onClickBtn"
-                    android:text="底部" />
-
-                <Button
-                    android:id="@+id/tl_2"
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:onClick="onClickBtn"
-                    android:text="顶部" />
-
-            </LinearLayout>
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="onClickBtn"
+                android:text="各种TabLayout" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -151,7 +150,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:onClick="onClickBtn"
-                    android:text="按鈕切換" />
+                    android:text="按鈕切換tab" />
 
                 <Button
                     android:id="@+id/tab_viewpage"
@@ -159,10 +158,24 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:onClick="onClickBtn"
-                    android:text="viewPage切換" />
+                    android:text="viewPage" />
+
+                <Button
+                    android:id="@+id/tl_1"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="Tablayout" />
 
             </LinearLayout>
-
+            <Button
+                android:id="@+id/tab_u3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="onClickBtn"
+                android:text="tab的实现TabLayout + ViewPager + Fragment" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -184,7 +197,6 @@
                     android:onClick="onClickBtn"
                     android:text="Service启动方式" />
             </LinearLayout>
-
 
         </LinearLayout>
     </ScrollView>

@@ -17,6 +17,8 @@ import com.study.activity.A15Service_player;
 import com.study.activity.A16BottomTab;
 import com.study.activity.A17ViewPagerTab;
 import com.study.activity.A18TablayoutTab;
+import com.study.activity.A19TabLayout;
+import com.study.activity.A20UnitTVF;
 import com.study.activity.a01_calculator;
 import com.study.activity.a02_bigger;
 import com.study.activity.a03_about;
@@ -26,6 +28,7 @@ import com.study.activity.a07_dynamicLayout;
 import com.study.activity.a08_file;
 import com.study.activity.a09_storage;
 import com.study.activity.a11ListView;
+import com.study.adapter.A20TVFAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -126,6 +129,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
                 break;
             }
+            case R.id.tab_u3: {
+                Intent i = new Intent(this, A20UnitTVF.class);
+                startActivity(i);
+                break;
+            }
             case R.id.player_service: {
                 Intent i = new Intent(this, A15Service_player.class);
                 startActivity(i);
@@ -142,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             }
             case R.id.tl_2: {
-                Intent i = new Intent(this, A18TablayoutTab.class);
+                Intent i = new Intent(this, A19TabLayout.class);
                 startActivity(i);
                 break;
             }

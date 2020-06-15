@@ -1,19 +1,13 @@
 package com.study.help;
 
-import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
-
 import androidx.fragment.app.Fragment;
 
 import com.study.R;
 import com.study.view.F18Item;
 
 public class A18DataGenerator {
-    public static final int []mTabRes = new int[]{R.drawable.sym_btn_selector,R.drawable.sym_btn_selector,R.drawable.sym_btn_selector,R.drawable.sym_btn_selector};
-    public static final int []mTabResPressed = new int[]{R.drawable.sym_btn_selector,R.drawable.sym_btn_selector,R.drawable.sym_btn_selector, R.drawable.sym_btn_selector};
+    // public static final int []mTabRes = new int[]{R.drawable.sym_btn_selector,R.drawable.sym_btn_selector,R.drawable.sym_btn_selector,R.drawable.sym_btn_selector};
+    // public static final int []mTabResPressed = new int[]{R.drawable.sym_btn_selector,R.drawable.sym_btn_selector,R.drawable.sym_btn_selector, R.drawable.sym_btn_selector};
     public static final String []mTabTitle = new String[]{"首页","发现","关注","我的"};
 
     public static Fragment[] getFragments(String[] from){

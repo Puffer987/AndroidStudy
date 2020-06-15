@@ -8,11 +8,10 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import java.util.List;
 
 public class A17ViewPagerAdapter extends FragmentPagerAdapter {
-
-    List<Fragment> mFragmentList;
+    private List<Fragment> mFragmentList;
 
     public A17ViewPagerAdapter(@NonNull FragmentManager fm, int behavior) {
-        super(fm, behavior);
+        this(fm, behavior, null);
     }
     public A17ViewPagerAdapter(@NonNull FragmentManager fm, int behavior, List<Fragment> fragmentList) {
         super(fm, behavior);

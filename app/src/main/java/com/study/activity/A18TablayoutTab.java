@@ -3,6 +3,8 @@ package com.study.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
@@ -51,6 +53,7 @@ public class A18TablayoutTab extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {
 
             }
+
         });
 
         mTabLayout.addTab(mTabLayout.newTab().setText(A18DataGenerator.mTabTitle[0]));

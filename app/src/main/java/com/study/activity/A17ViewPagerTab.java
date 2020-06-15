@@ -41,9 +41,10 @@ public class A17ViewPagerTab extends AppCompatActivity {
         f2.setArguments(bundle2);
         mFragmentList.add(f2);
 
+        mFragmentList.add(F17TextFragment.newInstance("使用newInstance"));
 
         mFragmentList.add(new F17TextFragment());
 
-        mViewPager.setAdapter(new A17ViewPagerAdapter(getSupportFragmentManager(), 2, mFragmentList));
+        mViewPager.setAdapter(new A17ViewPagerAdapter(getSupportFragmentManager(), 1, mFragmentList));
     }
 }

@@ -14,6 +14,8 @@
         android:roundIcon="@mipmap/adolf_study"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activity.A20UnitTVF"></activity>
+        <activity android:name=".activity.A19TabLayout" />
         <activity android:name=".activity.A18TablayoutTab" />
         <activity android:name=".activity.A17ViewPagerTab" />
         <activity android:name=".activity.A16BottomTab" />
