@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
@@ -6,28 +6,103 @@
     android:orientation="vertical"
     tools:context=".activity.a08_file">
 
-    <Button
-        android:id="@+id/externalStoragePublic"
+    <EditText
+        android:id="@+id/i08_text_area"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:onClick="createFile"
-        android:text="externalStoragePublic" />
+        android:background="#E8E8E8"
+        android:gravity="left|top"
+        android:inputType="textMultiLine"
+        android:minLines="8"
+        android:padding="10dp" />
 
-    <Button
-        android:id="@+id/externalCache"
+    <LinearLayout
+        android:id="@+id/i08_btn_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:onClick="createFile"
-        android:text="externalCache" />
+        android:layout_below="@+id/i08_text_area">
+
+        <Button
+            android:id="@+id/i08_save"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:onClick="save"
+            android:text="保存" />
+
+        <Button
+            android:id="@+id/i08_clear"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:onClick="clear"
+            android:text="清空" />
+
+    </LinearLayout>
 
     <Button
-        android:id="@+id/externalFiles"
+        android:id="@+id/i08_read"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:onClick="createFile"
-        android:text="ExternalFiles" />
+        android:layout_height="50dp"
+        android:layout_below="@+id/i08_btn_group"
+        android:onClick="read"
+        android:text="读取" />
 
-</LinearLayout>
+    <ScrollView
+        android:id="@+id/i08_scroll_display"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/i08_modify"
+        android:layout_below="@+id/i08_path"
+        android:background="#ECE0AE">
+
+        <TextView
+            android:id="@+id/i08_display"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="16sp" />
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/i08_modify"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:onClick="modify"
+        android:text="修改" />
+
+    <Button
+        android:id="@+id/i08_path"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/i08_read"
+        android:onClick="printPath"
+        android:text="打印路径" />
+
+    <!--<Button-->
+    <!--    android:id="@+id/externalStoragePublic"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:gravity="center"-->
+    <!--    android:onClick="createFile"-->
+    <!--    android:text="externalStoragePublic" />-->
+
+    <!--<Button-->
+    <!--    android:id="@+id/externalCache"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:gravity="center"-->
+    <!--    android:onClick="createFile"-->
+    <!--    android:text="externalCache" />-->
+
+    <!--<Button-->
+    <!--    android:id="@+id/externalFiles"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:gravity="center"-->
+    <!--    android:onClick="createFile"-->
+    <!--    android:text="ExternalFiles" />-->
+
+</RelativeLayout>
