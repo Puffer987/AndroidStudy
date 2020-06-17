@@ -21,6 +21,7 @@ import com.study.activity.A19TabLayout;
 import com.study.activity.A20UnitTVF;
 import com.study.activity.A21Permission;
 import com.study.activity.A22Dialog;
+import com.study.activity.A23BroadcastActivity;
 import com.study.activity.a01_calculator;
 import com.study.activity.a02_bigger;
 import com.study.activity.a03_about;
@@ -154,12 +155,19 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(this, A19TabLayout.class);
                 startActivity(i);
                 break;
-            } case R.id.permission: {
+            }
+            case R.id.permission: {
                 Intent i = new Intent(this, A21Permission.class);
                 startActivity(i);
                 break;
-            }case R.id.dialog: {
+            }
+            case R.id.dialog: {
                 Intent i = new Intent(this, A22Dialog.class);
+                startActivity(i);
+                break;
+            }
+            case R.id.broadcast: {
+                Intent i = new Intent(this, A23BroadcastActivity.class);
                 startActivity(i);
                 break;
             }
