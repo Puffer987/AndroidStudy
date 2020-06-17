@@ -13,7 +13,7 @@
         android:background="#E8E8E8"
         android:gravity="left|top"
         android:inputType="textMultiLine"
-        android:minLines="8"
+        android:minLines="6"
         android:padding="10dp" />
 
     <LinearLayout
@@ -53,7 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/i08_modify"
-        android:layout_below="@+id/i08_path"
+        android:layout_below="@+id/i08_sd_path"
         android:background="#ECE0AE">
 
         <TextView
@@ -80,6 +80,14 @@
         android:layout_below="@+id/i08_read"
         android:onClick="printPath"
         android:text="打印路径" />
+
+    <Button
+        android:id="@+id/i08_sd_path"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/i08_path"
+        android:onClick="printSDPath"
+        android:text="打印sd卡路径" />
 
     <!--<Button-->
     <!--    android:id="@+id/externalStoragePublic"-->

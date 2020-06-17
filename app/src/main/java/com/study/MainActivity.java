@@ -12,13 +12,15 @@ import com.study.activity.A11ListViewObject;
 import com.study.activity.A12GridView;
 import com.study.activity.A13DiyView;
 import com.study.activity.A14FragmentActivity;
-import com.study.activity.A15ServiceStartBind;
-import com.study.activity.A15Service_player;
+import com.study.activity.A15BindServiceActivity;
+import com.study.activity.A15PlayerServiceActivity;
 import com.study.activity.A16BottomTab;
 import com.study.activity.A17ViewPagerTab;
 import com.study.activity.A18TablayoutTab;
 import com.study.activity.A19TabLayout;
 import com.study.activity.A20UnitTVF;
+import com.study.activity.A21Permission;
+import com.study.activity.A22Dialog;
 import com.study.activity.a01_calculator;
 import com.study.activity.a02_bigger;
 import com.study.activity.a03_about;
@@ -28,7 +30,6 @@ import com.study.activity.a07_dynamicLayout;
 import com.study.activity.a08_file;
 import com.study.activity.a09_storage;
 import com.study.activity.a11ListView;
-import com.study.adapter.A20TVFAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -135,12 +136,12 @@ public class MainActivity extends AppCompatActivity {
                 break;
             }
             case R.id.player_service: {
-                Intent i = new Intent(this, A15Service_player.class);
+                Intent i = new Intent(this, A15PlayerServiceActivity.class);
                 startActivity(i);
                 break;
             }
             case R.id.bind_start_service: {
-                Intent i = new Intent(this, A15ServiceStartBind.class);
+                Intent i = new Intent(this, A15BindServiceActivity.class);
                 startActivity(i);
                 break;
             }
@@ -151,6 +152,14 @@ public class MainActivity extends AppCompatActivity {
             }
             case R.id.tl_2: {
                 Intent i = new Intent(this, A19TabLayout.class);
+                startActivity(i);
+                break;
+            } case R.id.permission: {
+                Intent i = new Intent(this, A21Permission.class);
+                startActivity(i);
+                break;
+            }case R.id.dialog: {
+                Intent i = new Intent(this, A22Dialog.class);
                 startActivity(i);
                 break;
             }

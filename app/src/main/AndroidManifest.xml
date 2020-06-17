@@ -6,29 +6,34 @@
     <uses-permission android:name="android.permission.VIBRATE" /> <!-- 往SDCard读写数据权限 -->
     <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/adolf_study"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/adolf_study"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.A20UnitTVF"></activity>
+        <activity android:name=".activity.A22Dialog"></activity>
+        <activity android:name=".activity.A21Permission" />
+        <activity android:name=".activity.A20UnitTVF" />
         <activity android:name=".activity.A19TabLayout" />
         <activity android:name=".activity.A18TablayoutTab" />
         <activity android:name=".activity.A17ViewPagerTab" />
         <activity android:name=".activity.A16BottomTab" />
-        <activity android:name=".activity.A15ServiceStartBind" />
+        <activity android:name=".activity.A15BindServiceActivity" />
 
+        <service
+            android:name=".activity.S15PlayerService"
+            android:label="startService音乐播放服务" />
         <service
             android:name=".activity.S15MyService"
-            android:label="@string/app_name" />
-        <service
-            android:name=".activity.S15ServiceStartBind"
-            android:label="BindStart" />
+            android:label="Service启动方式测试服务" />
 
-        <activity android:name=".activity.A15Service_player" />
+
+        <activity android:name=".activity.A15PlayerServiceActivity" />
         <activity android:name=".activity.A14FragmentActivity" />
         <activity android:name=".activity.A13DiyView" />
         <activity android:name=".activity.A12GridView" />

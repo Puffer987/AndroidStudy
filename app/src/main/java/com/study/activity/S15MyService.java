@@ -2,94 +2,72 @@ package com.study.activity;
 
 import android.app.Service;
 import android.content.Intent;
-import android.media.MediaPlayer;
-import android.os.Bundle;
+import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
 
-import com.study.R;
+import androidx.annotation.Nullable;
 
 public class S15MyService extends Service {
-    private final String TAG = "MyService";
+    private final String TAG = "Service类中";
+    private int count;
+    private boolean quit;
+    private MyBinder binder = new MyBinder();
 
-    private MediaPlayer mediaPlayer;
-
-    private int startId;
-
-    public enum Control {
-        PLAY, PAUSE, STOP
+    public class MyBinder extends Binder {
+        public int getCount() {
+            return count;
+        }
     }
 
-    public S15MyService() {
+    @Nullable
+    @Override
+    public IBinder onBind(Intent intent) {
+        Log.i(TAG, "onBind方法被调用!");
+        return binder;
     }
 
     @Override
     public void onCreate() {
-        if (mediaPlayer == null) {
-            mediaPlayer = MediaPlayer.create(this, R.raw.light);
-            mediaPlayer.setLooping(false);
-        }
-        Log.e(TAG, "onCreate");
         super.onCreate();
-    }
-
-    @Override
-    public int onStartCommand(Intent intent, int flags, int startId) {
-        this.startId = startId;
-        Log.e(TAG, "onStartCommand---startId: " + startId);
-        Bundle bundle = intent.getExtras();
-        if (bundle != null) {
-            Control control = (Control) bundle.getSerializable("Key");
-            if (control != null) {
-                switch (control) {
-                    case PLAY:
-                        play();
-                        break;
-                    case PAUSE:
-                        pause();
-                        break;
-                    case STOP:
-                        stop();
-                        break;
+        Log.i(TAG, "onCreate方法被调用!");
+        //创建一个线程动态地修改count的值
+        new Thread() {
+            public void run() {
+                while (!quit) {
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    count++;
                 }
             }
-        }
-        return super.onStartCommand(intent, flags, startId);
+        }.start();
     }
 
     @Override
     public void onDestroy() {
-        Log.e(TAG, "onDestroy");
-        if (mediaPlayer != null) {
-            mediaPlayer.stop();
-            mediaPlayer.release();
-        }
+        this.quit = true;
+        Log.i(TAG, "onDestroyed方法被调用!");
         super.onDestroy();
     }
 
-    private void play() {
-        if (!mediaPlayer.isPlaying()) {
-            mediaPlayer.start();
-        }
-    }
-
-    private void pause() {
-        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
-            mediaPlayer.pause();
-        }
-    }
-
-    private void stop() {
-        if (mediaPlayer != null) {
-            mediaPlayer.stop();
-        }
-        stopSelf(startId);
+    @Override
+    public boolean onUnbind(Intent intent) {
+        Log.i(TAG, "onUnbind方法被调用!");
+        return super.onUnbind(intent);
     }
 
     @Override
-    public IBinder onBind(Intent intent) {
-        Log.e(TAG, "onBind");
-        throw new UnsupportedOperationException("Not yet implemented");
+    public void onRebind(Intent intent) {
+        Log.i(TAG, "onRebind方法被调用!");
+        super.onRebind(intent);
     }
 
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        Log.i(TAG, "onStartCommand: 被调用！");
+        return super.onStartCommand(intent, flags, startId);
+    }
 }

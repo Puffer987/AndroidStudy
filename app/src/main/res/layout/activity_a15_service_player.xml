@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activity.A15Service_player">
+    tools:context=".activity.A15PlayerServiceActivity">
 
 
     <Button

@@ -19,6 +19,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <Button
                     android:id="@+id/cal"
                     android:layout_width="match_parent"
@@ -28,35 +29,36 @@
                     android:text="计算器" />
 
                 <Button
-                android:id="@+id/bigger"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:onClick="onClickBtn"
-                android:text="放大" />
+                    android:id="@+id/bigger"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="放大" />
 
             </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <Button
-                android:id="@+id/vibrate"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:onClick="onClickBtn"
-                android:text="振动" />
+                android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/pcMuscle"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:onClick="onClickBtn"
-                android:text="振动码转换" />
+                <Button
+                    android:id="@+id/vibrate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="振动" />
 
-        </LinearLayout>
+                <Button
+                    android:id="@+id/pcMuscle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="振动码转换" />
+
+            </LinearLayout>
 
             <Button
                 android:id="@+id/dynamicLayout"
@@ -66,26 +68,27 @@
                 android:onClick="onClickBtn"
                 android:text="点击添加一列" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <Button
-                android:id="@+id/file"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:onClick="onClickBtn"
-                android:text="文件创建" />
+                android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/storage"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:onClick="onClickBtn"
-                android:text="存储文件" />
+                <Button
+                    android:id="@+id/file"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="文件创建" />
 
-        </LinearLayout>
+                <Button
+                    android:id="@+id/storage"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="存储文件" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -169,6 +172,7 @@
                     android:text="Tablayout" />
 
             </LinearLayout>
+
             <Button
                 android:id="@+id/tab_u3"
                 android:layout_width="match_parent"
@@ -197,6 +201,22 @@
                     android:onClick="onClickBtn"
                     android:text="Service启动方式" />
             </LinearLayout>
+
+            <Button
+                android:id="@+id/permission"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="onClickBtn"
+                android:text="动态权限申请" />
+
+            <Button
+                android:id="@+id/dialog"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="onClickBtn"
+                android:text="对话框" />
 
         </LinearLayout>
     </ScrollView>

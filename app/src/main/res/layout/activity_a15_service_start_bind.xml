@@ -4,18 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
-    tools:context=".activity.A15ServiceStartBind">
+    tools:context=".activity.A15BindServiceActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="startService" />
 
     <Button
+        android:id="@+id/btnStart"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/bindBtn"
-        android:text="bind"/>
+        android:text="开启服务" />
+
     <Button
+        android:id="@+id/btnStop"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/startBtn"
-        android:text="start"/>
+        android:text="关闭服务" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:text="bindService" />
+
+    <Button
+        android:id="@+id/btnBind"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="绑定service" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="解除绑定" />
+
+    <Button
+        android:id="@+id/btnStatus"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="获取状态" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:text="@string/service_result"/>
 
 </LinearLayout>

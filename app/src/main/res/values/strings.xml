@@ -2,12 +2,20 @@
     <string name="app_name">Adolf</string>
     <string name="button">button</string>
     <string name="about">Abuot</string>
-    <string name="version_info">Version: %s \\n Designer: Adolf</string>
+    <string name="version_info">Version: %s \n Designer: Adolf</string>
     <string name="version_name" translatable="false">1.1.0</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_a19_bottom_nav">MainActivity</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="title_activity_a19_bottom_nav" translatable="false">MainActivity</string>
+    <string name="title_home" translatable="false">Home</string>
+    <string name="title_dashboard" translatable="false">Dashboard</string>
+    <string name="title_notifications" translatable="false">Notifications</string>
+    <string name="service_result" translatable="false">
+        I/Activity按钮: 开启服务\nI/Service类中: onCreate方法被调用!\n I/Service类中: onStartCommand: 被调用！\n
+        \n
+        I/Activity按钮: 关闭服务\nI/Service类中: onDestroyed方法被调用!\n
+        \n
+        I/Activity按钮: 绑定服务\nI/Service类中: onCreate方法被调用!\nI/Service类中: onBind方法被调用!\nI/System.out: ------Service Connected-------\n
+        \n
+        I/Activity按钮: 解绑服务\nI/Service类中: onUnbind方法被调用!\nI/Service类中: onDestroyed方法被调用!</string>
 </resources>

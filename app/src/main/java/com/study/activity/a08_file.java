@@ -1,21 +1,20 @@
 package com.study.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.study.R;
-import com.study.help.SDFileHelper;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
-import org.w3c.dom.Text;
+import com.study.R;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -25,7 +24,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.io.RandomAccessFile;
 import java.io.Writer;
 
 public class a08_file extends AppCompatActivity {
@@ -118,5 +116,37 @@ public class a08_file extends AppCompatActivity {
         textView.setText(out);
 
         // out.append("().getAbsolutePath():\t+().getAbsolutePath());
+    }
+
+    public void printSDPath(View view) {
+        Log.i("存储策略：", Environment.isExternalStorageLegacy()+"");
+
+        int hasWritePermission = ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        if (hasWritePermission != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},100);
+        }else {
+            Toast.makeText(this, "已经有了", Toast.LENGTH_SHORT).show();
+            StringBuffer out = new StringBuffer();
+            // out.append("().getAbsolutePath():\t"+().getAbsolutePath());
+            // Environment.getExternalStorageDirectory();
+            // Environment.getExternalStorageDirectory().getPath();
+            // Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES)
+            TextView textView = findViewById(R.id.i08_display);
+            textView.setText(out);
+
+        }
+
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == 100){
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                Toast.makeText(this, "权限申请成功", Toast.LENGTH_SHORT).show();
+            }else{
+                Toast.makeText(this, "失败", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }

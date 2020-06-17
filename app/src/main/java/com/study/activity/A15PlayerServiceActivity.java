@@ -8,7 +8,7 @@ import android.view.View;
 
 import com.study.R;
 
-public class A15Service_player extends AppCompatActivity {
+public class A15PlayerServiceActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,25 +16,25 @@ public class A15Service_player extends AppCompatActivity {
         setContentView(R.layout.activity_a15_service_player);
     }
     public void playMusic(View view) {
-        Intent intent = new Intent(this, S15MyService.class);
+        Intent intent = new Intent(this, S15PlayerService.class);
         Bundle bundle = new Bundle();
-        bundle.putSerializable("Key", S15MyService.Control.PLAY);
+        bundle.putSerializable("Key", S15PlayerService.Control.PLAY);
         intent.putExtras(bundle);
         startService(intent);
     }
 
     public void pauseMusic(View view) {
-        Intent intent = new Intent(this, S15MyService.class);
+        Intent intent = new Intent(this, S15PlayerService.class);
         Bundle bundle = new Bundle();
-        bundle.putSerializable("Key", S15MyService.Control.PAUSE);
+        bundle.putSerializable("Key", S15PlayerService.Control.PAUSE);
         intent.putExtras(bundle);
         startService(intent);
     }
 
     public void stopMusic(View view) {
-        Intent intent = new Intent(this, S15MyService.class);
+        Intent intent = new Intent(this, S15PlayerService.class);
         Bundle bundle = new Bundle();
-        bundle.putSerializable("Key", S15MyService.Control.STOP);
+        bundle.putSerializable("Key", S15PlayerService.Control.STOP);
         intent.putExtras(bundle);
         startService(intent);
         //或者是直接如下调用
