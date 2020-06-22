@@ -6,12 +6,37 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".activity.A15BindServiceActivity">
+    tools:context=".activity.A15TestServiceActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/send_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3" />
+
+        <TextView
+            android:id="@+id/receive_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSyn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="同步数据" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:text="startService" />
 
     <Button
@@ -30,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:text="bindService" />
 
     <Button
@@ -53,9 +78,9 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:paddingLeft="20dp"
-        android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
-        android:text="@string/service_result"/>
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:text="@string/service_result" />
 
 </LinearLayout>

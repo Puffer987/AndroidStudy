@@ -3,22 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.study">
 
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <!-- 往SDCard读写数据权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 往SDCard读写数据权限 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/adolf_study"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:requestLegacyExternalStorage="true"
-        android:roundIcon="@mipmap/adolf_study"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".activity.A23BroadcastActivity"></activity>
+        <activity android:name=".MVP.View.LoginActivity"></activity>
+        <activity android:name=".activity.A23BroadcastActivity" />
         <activity android:name=".activity.A22Dialog" />
         <activity android:name=".activity.A21Permission" />
         <activity android:name=".activity.A20UnitTVF" />
@@ -26,7 +24,7 @@
         <activity android:name=".activity.A18TablayoutTab" />
         <activity android:name=".activity.A17ViewPagerTab" />
         <activity android:name=".activity.A16BottomTab" />
-        <activity android:name=".activity.A15BindServiceActivity" />
+        <activity android:name=".activity.A15TestServiceActivity" />
 
         <service
             android:name=".activity.S15PlayerService"

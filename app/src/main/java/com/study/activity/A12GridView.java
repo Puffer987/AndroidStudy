@@ -28,8 +28,9 @@ public class A12GridView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a12_grid_view);
 
-        LayoutInflater layoutInflater = getLayoutInflater();
-        layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+        LayoutInflater layoutInflater;
+        // LayoutInflater layoutInflater = getLayoutInflater();
+        // layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
         layoutInflater = LayoutInflater.from(A12GridView.this);
         layoutInflater.inflate(R.layout.activity_main,null);
 

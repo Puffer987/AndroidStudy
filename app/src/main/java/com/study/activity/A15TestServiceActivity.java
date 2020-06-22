@@ -12,30 +12,36 @@ import android.os.IBinder;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.study.R;
 
-public class A15BindServiceActivity extends AppCompatActivity implements View.OnClickListener {
+public class A15TestServiceActivity extends AppCompatActivity implements View.OnClickListener {
     private String TAG = "Activity按钮";
     private Button btnStart;
     private Button btnStop;
     private Button btnBind;
     private Button btnCancel;
     private Button btnStatus;
+    private TextView receiveText;
+    private EditText sendText;
     private Intent intent;
     private boolean isConn = false;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_a15_service_start_bind);
+        setContentView(R.layout.activity_a15_test_service);
 
         btnStart = findViewById(R.id.btnStart);
         btnStop = findViewById(R.id.btnStop);
         btnBind = findViewById(R.id.btnBind);
         btnCancel = findViewById(R.id.btnCancel);
         btnStatus = findViewById(R.id.btnStatus);
+        sendText = findViewById(R.id.send_text);
+        receiveText = findViewById(R.id.receive_text);
 
         intent = new Intent(this, S15MyService.class);
 
@@ -48,17 +54,18 @@ public class A15BindServiceActivity extends AppCompatActivity implements View.On
     }
 
     S15MyService.MyBinder binder;
+
     private ServiceConnection conn = new ServiceConnection() {
         //Activity与Service断开连接时回调该方法
         @Override
         public void onServiceDisconnected(ComponentName name) {
-            Log.i("onServiceDisconnected","onServiceConnected方法");
+            Log.i("onServiceDisconnected", "onServiceConnected方法");
         }
 
         //Activity与Service连接成功时回调该方法
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-            Log.i("ServiceConnection","onServiceConnected方法");
+            Log.i("ServiceConnection", "onServiceConnected方法");
             binder = (S15MyService.MyBinder) service;
         }
     };
@@ -68,7 +75,9 @@ public class A15BindServiceActivity extends AppCompatActivity implements View.On
         switch (v.getId()) {
             case R.id.btnStart:
                 Log.i(TAG, "开启服务");
-                startService(intent);
+                Intent i = new Intent(this,S15MyService.class);
+                i.putExtra("send",sendText.getText().toString());
+                startService(i);
                 break;
             case R.id.btnStop:
                 Log.i(TAG, "关闭服务");
@@ -93,7 +102,10 @@ public class A15BindServiceActivity extends AppCompatActivity implements View.On
                     Toast.makeText(getApplicationContext(), "Service的count的值为:" + binder.getCount(), Toast.LENGTH_SHORT).show();
                 else Toast.makeText(this, "没有绑定服务", Toast.LENGTH_SHORT).show();
                 break;
-
+            case R.id.btnSyn:
+                String send = sendText.getText().toString();
+                System.err.println("--------------"+send);
+                binder.setData(send);
         }
     }
 }

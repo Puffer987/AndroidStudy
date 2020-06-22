@@ -225,6 +225,13 @@
                 android:layout_weight="1"
                 android:onClick="onClickBtn"
                 android:text="广播" />
+            <Button
+                android:id="@+id/mvp_login"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="onClickBtn"
+                android:text="Mvp登陆" />
 
         </LinearLayout>
     </ScrollView>

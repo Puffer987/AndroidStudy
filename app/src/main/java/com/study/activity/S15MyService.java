@@ -12,11 +12,15 @@ public class S15MyService extends Service {
     private final String TAG = "Service类中";
     private int count;
     private boolean quit;
+    private String sendData;
     private MyBinder binder = new MyBinder();
 
     public class MyBinder extends Binder {
         public int getCount() {
             return count;
+        }
+        public void setData (String send){
+            sendData = send;
         }
     }
 
@@ -40,7 +44,8 @@ public class S15MyService extends Service {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    count++;
+                    // count++;
+                    System.out.println(sendData+"："+count++);
                 }
             }
         }.start();
@@ -68,6 +73,7 @@ public class S15MyService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.i(TAG, "onStartCommand: 被调用！");
+        sendData = intent.getStringExtra("data");
         return super.onStartCommand(intent, flags, startId);
     }
 }

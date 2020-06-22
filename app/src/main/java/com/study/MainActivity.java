@@ -8,11 +8,12 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.study.MVP.View.LoginActivity;
 import com.study.activity.A11ListViewObject;
 import com.study.activity.A12GridView;
 import com.study.activity.A13DiyView;
 import com.study.activity.A14FragmentActivity;
-import com.study.activity.A15BindServiceActivity;
+import com.study.activity.A15TestServiceActivity;
 import com.study.activity.A15PlayerServiceActivity;
 import com.study.activity.A16BottomTab;
 import com.study.activity.A17ViewPagerTab;
@@ -142,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             }
             case R.id.bind_start_service: {
-                Intent i = new Intent(this, A15BindServiceActivity.class);
+                Intent i = new Intent(this, A15TestServiceActivity.class);
                 startActivity(i);
                 break;
             }
@@ -168,6 +169,10 @@ public class MainActivity extends AppCompatActivity {
             }
             case R.id.broadcast: {
                 Intent i = new Intent(this, A23BroadcastActivity.class);
+                startActivity(i);
+                break;
+            } case R.id.mvp_login: {
+                Intent i = new Intent(this, LoginActivity.class);
                 startActivity(i);
                 break;
             }
