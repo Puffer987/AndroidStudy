@@ -10,6 +10,7 @@
     <string name="title_home" translatable="false">Home</string>
     <string name="title_dashboard" translatable="false">Dashboard</string>
     <string name="title_notifications" translatable="false">Notifications</string>
+    <string name="textview_run" translatable="false">跑马灯测试，能跑起来了吗，循环跑动\n跑马灯测试，能跑起来了吗，循环跑动</string>
     <string name="service_result" translatable="false">
         I/Activity按钮: 开启服务\nI/Service类中: onCreate方法被调用!\n I/Service类中: onStartCommand: 被调用！\n
         \n
