@@ -25,6 +25,7 @@ public class A15TestServiceActivity extends AppCompatActivity implements View.On
     private Button btnBind;
     private Button btnCancel;
     private Button btnStatus;
+    private Button btnSynData;
     private TextView receiveText;
     private EditText sendText;
     private Intent intent;
@@ -36,6 +37,7 @@ public class A15TestServiceActivity extends AppCompatActivity implements View.On
         setContentView(R.layout.activity_a15_test_service);
 
         btnStart = findViewById(R.id.btnStart);
+        btnSynData = findViewById(R.id.btnSynData);
         btnStop = findViewById(R.id.btnStop);
         btnBind = findViewById(R.id.btnBind);
         btnCancel = findViewById(R.id.btnCancel);
@@ -45,6 +47,7 @@ public class A15TestServiceActivity extends AppCompatActivity implements View.On
 
         intent = new Intent(this, S15MyService.class);
 
+        btnSynData.setOnClickListener(this);
         btnStart.setOnClickListener(this);
         btnStop.setOnClickListener(this);
         btnBind.setOnClickListener(this);
@@ -73,10 +76,16 @@ public class A15TestServiceActivity extends AppCompatActivity implements View.On
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.btnSynData:
+                if (binder != null) {
+                    String send = sendText.getText().toString();
+                    binder.setData(send);
+                }
+                break;
             case R.id.btnStart:
                 Log.i(TAG, "开启服务");
-                Intent i = new Intent(this,S15MyService.class);
-                i.putExtra("send",sendText.getText().toString());
+                Intent i = new Intent(this, S15MyService.class);
+                i.putExtra("send", sendText.getText().toString());
                 startService(i);
                 break;
             case R.id.btnStop:
@@ -102,10 +111,8 @@ public class A15TestServiceActivity extends AppCompatActivity implements View.On
                     Toast.makeText(getApplicationContext(), "Service的count的值为:" + binder.getCount(), Toast.LENGTH_SHORT).show();
                 else Toast.makeText(this, "没有绑定服务", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.btnSyn:
-                String send = sendText.getText().toString();
-                System.err.println("--------------"+send);
-                binder.setData(send);
+
         }
     }
+
 }
