@@ -26,13 +26,13 @@ public class A21Permission extends AppCompatActivity {
         setContentView(R.layout.activity_a21_permission);
     }
 
-    public void storagePermission(View view){
+    public void storagePermission(View view) {
         Toast.makeText(this, "申请读取存储权限", Toast.LENGTH_SHORT).show();
 
         int isPermission = ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
-        if (isPermission != PackageManager.PERMISSION_GRANTED){
-            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},1);
-        }else{
+        if (isPermission != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
+        } else {
             Toast.makeText(this, "已有权限了", Toast.LENGTH_SHORT).show();
         }
     }
@@ -40,10 +40,10 @@ public class A21Permission extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == 1){
-            if (grantResults[0] == PackageManager.PERMISSION_GRANTED){
+        if (requestCode == 1) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 Toast.makeText(this, "权限申请成功", Toast.LENGTH_SHORT).show();
-            }else {
+            } else {
                 Toast.makeText(this, "未授权", Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setMessage("备份通讯录需要访问 “通讯录” 和 “外部存储器”，请到 “应用信息 -> 权限” 中授予！");

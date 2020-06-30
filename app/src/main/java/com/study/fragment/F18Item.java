@@ -1,4 +1,4 @@
-package com.study.view;
+package com.study.fragment;
 
 import android.os.Bundle;
 

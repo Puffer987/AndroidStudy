@@ -23,6 +23,8 @@ import com.study.activity.A20UnitTVF;
 import com.study.activity.A21Permission;
 import com.study.activity.A22Dialog;
 import com.study.activity.A23BroadcastActivity;
+import com.study.activity.A24RecyclerViewShu;
+import com.study.activity.A25ContentProvider;
 import com.study.activity.a01_calculator;
 import com.study.activity.a02_bigger;
 import com.study.activity.a03_about;
@@ -112,6 +114,21 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
                 break;
             }
+            case R.id.recycle_view1: {
+                Intent i = new Intent(this, A24RecyclerViewShu.class);
+                startActivity(i);
+                break;
+            }
+            case R.id.recycle_view2: {
+                Intent i = new Intent(this, A24RecyclerViewShu.class);
+                startActivity(i);
+                break;
+            }
+            case R.id.recycle_view3: {
+                Intent i = new Intent(this, A24RecyclerViewShu.class);
+                startActivity(i);
+                break;
+            }
             case R.id.diy_view: {
                 Intent i = new Intent(this, A13DiyView.class);
                 startActivity(i);
@@ -173,6 +190,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             } case R.id.mvp_login: {
                 Intent i = new Intent(this, LoginActivity.class);
+                startActivity(i);
+                break;
+            }case R.id.content_provider: {
+                Intent i = new Intent(this, A25ContentProvider.class);
                 startActivity(i);
                 break;
             }

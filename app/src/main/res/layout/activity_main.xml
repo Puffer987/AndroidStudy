@@ -26,7 +26,8 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:onClick="onClickBtn"
-                    android:text="计算器" />
+                    android:text="计算器"
+                    android:textAllCaps="false" />
 
                 <Button
                     android:id="@+id/bigger"
@@ -34,7 +35,8 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:onClick="onClickBtn"
-                    android:text="放大" />
+                    android:text="放大"
+                    android:textAllCaps="false" />
 
                 <TextView
                     android:layout_width="100dp"
@@ -58,7 +60,8 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:onClick="onClickBtn"
-                    android:text="振动" />
+                    android:text="振动"
+                    android:textAllCaps="false" />
 
                 <Button
                     android:id="@+id/pcMuscle"
@@ -66,7 +69,8 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:onClick="onClickBtn"
-                    android:text="振动码转换" />
+                    android:text="振动码转换"
+                    android:textAllCaps="false" />
 
             </LinearLayout>
 
@@ -76,7 +80,8 @@
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:onClick="onClickBtn"
-                android:text="点击添加一列" />
+                android:text="点击添加一列"
+                android:textAllCaps="false" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -88,7 +93,8 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:onClick="onClickBtn"
-                    android:text="文件创建" />
+                    android:text="文件创建"
+                    android:textAllCaps="false" />
 
                 <Button
                     android:id="@+id/storage"
@@ -96,7 +102,8 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:onClick="onClickBtn"
-                    android:text="存储文件" />
+                    android:text="存储文件"
+                    android:textAllCaps="false" />
 
             </LinearLayout>
 
@@ -110,7 +117,8 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:onClick="onClickBtn"
-                    android:text="ListView" />
+                    android:text="ListView"
+                    android:textAllCaps="false" />
 
                 <Button
                     android:id="@+id/list_view2"
@@ -118,7 +126,8 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:onClick="onClickBtn"
-                    android:text="ListView2" />
+                    android:text="ListView2"
+                    android:textAllCaps="false" />
 
                 <Button
                     android:id="@+id/grid_view"
@@ -126,7 +135,41 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:onClick="onClickBtn"
-                    android:text="GridView" />
+                    android:text="GridView"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/recycle_view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="RecyclerView竖"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/recycle_view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="RecyclerView横"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/recycle_view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="RecyclerView瀑布"
+                    android:textAllCaps="false" />
             </LinearLayout>
 
             <Button
@@ -135,7 +178,8 @@
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:onClick="onClickBtn"
-                android:text="自定义控件" />
+                android:text="自定义控件"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/fragment_test"
@@ -143,7 +187,8 @@
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:onClick="onClickBtn"
-                android:text="Fragment旋转屏幕" />
+                android:text="Fragment旋转屏幕"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/tl_2"
@@ -151,7 +196,8 @@
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:onClick="onClickBtn"
-                android:text="各种TabLayout" />
+                android:text="各种TabLayout"
+                android:textAllCaps="false" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -163,7 +209,8 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:onClick="onClickBtn"
-                    android:text="按鈕切換tab" />
+                    android:text="按鈕切換tab"
+                    android:textAllCaps="false" />
 
                 <Button
                     android:id="@+id/tab_viewpage"
@@ -171,7 +218,8 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:onClick="onClickBtn"
-                    android:text="viewPage" />
+                    android:text="viewPage"
+                    android:textAllCaps="false" />
 
                 <Button
                     android:id="@+id/tl_1"
@@ -179,7 +227,8 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:onClick="onClickBtn"
-                    android:text="Tablayout" />
+                    android:text="Tablayout"
+                    android:textAllCaps="false" />
 
             </LinearLayout>
 
@@ -189,7 +238,8 @@
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:onClick="onClickBtn"
-                android:text="tab的实现TabLayout + ViewPager + Fragment" />
+                android:text="tab的实现TabLayout + ViewPager + Fragment"
+                android:textAllCaps="false" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -201,7 +251,8 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:onClick="onClickBtn"
-                    android:text="Service播放" />
+                    android:text="Service播放"
+                    android:textAllCaps="false" />
 
                 <Button
                     android:id="@+id/bind_start_service"
@@ -209,7 +260,8 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:onClick="onClickBtn"
-                    android:text="Service启动方式" />
+                    android:text="Service启动方式"
+                    android:textAllCaps="false" />
             </LinearLayout>
 
             <Button
@@ -218,7 +270,8 @@
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:onClick="onClickBtn"
-                android:text="动态权限申请" />
+                android:text="动态权限申请"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/dialog"
@@ -226,7 +279,8 @@
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:onClick="onClickBtn"
-                android:text="对话框" />
+                android:text="对话框"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/broadcast"
@@ -234,7 +288,8 @@
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:onClick="onClickBtn"
-                android:text="广播" />
+                android:text="广播"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/mvp_login"
@@ -242,7 +297,17 @@
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:onClick="onClickBtn"
-                android:text="Mvp登陆" />
+                android:text="Mvp登陆"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/content_provider"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="onClickBtn"
+                android:text="读取联系人"
+                android:textAllCaps="false" />
 
         </LinearLayout>
     </ScrollView>

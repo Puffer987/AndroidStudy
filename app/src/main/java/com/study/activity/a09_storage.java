@@ -1,6 +1,7 @@
 package com.study.activity;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -10,10 +11,14 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.os.Environment;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +33,7 @@ public class a09_storage extends AppCompatActivity {
     private TextView dataView;
     private Button saveButton;
     private Button loadButton;
+    private EditText editText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +42,69 @@ public class a09_storage extends AppCompatActivity {
         dataView = (TextView) findViewById(R.id.data_view);
         saveButton = (Button) findViewById(R.id.save_button);
         loadButton = (Button) findViewById(R.id.load_button);
+        editText = findViewById(R.id.i09_edit_text);
         setListener();
+
+        String text = load();
+        if (!TextUtils.isEmpty(text)) {
+            editText.setText(text);
+            editText.setSelection(text.length());
+            Toast.makeText(this, "加载完成", Toast.LENGTH_SHORT).show();
+        }
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        String input = editText.getText().toString();
+        save(input);
+    }
+
+    public void save(String input) {
+        FileOutputStream out = null;
+        BufferedWriter writer = null;
+        try {
+            out = openFileOutput("data", Context.MODE_PRIVATE);
+            writer = new BufferedWriter(new OutputStreamWriter(out));
+            writer.write(input);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (writer != null) {
+                    writer.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public String load() {
+        FileInputStream in = null;
+        BufferedReader reader = null;
+        StringBuilder context = new StringBuilder();
+        try {
+            in = openFileInput("data");
+            reader = new BufferedReader(new InputStreamReader(in));
+            String line = "";
+            while ((line = reader.readLine()) != null) {
+                context.append(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return context.toString();
+    }
+
 
     private void setListener() {
         saveButton.setOnClickListener(new View.OnClickListener() {
@@ -62,8 +129,6 @@ public class a09_storage extends AppCompatActivity {
     }
 
     public void saveData() throws IOException {
-
-//        File sdCard = Environment.getExternalStorageDirectory();
         File sdCard = getExternalFilesDir(null);
         // 获取外部存储设备（SD卡）的路径
         Log.i(TAG, sdCard.getAbsolutePath());
@@ -98,9 +163,9 @@ public class a09_storage extends AppCompatActivity {
         } catch (FileNotFoundException e) {
             dataView.setText("没有发现保存的数据");
         } finally {
-            if (reader != null){
+            if (reader != null) {
                 reader.close();
-            }else{
+            } else {
                 System.err.println("============");
             }
 

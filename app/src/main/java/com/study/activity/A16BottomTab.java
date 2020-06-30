@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.study.R;
-import com.study.view.F16IHomeFragment;
-import com.study.view.F16IndexFragment;
+import com.study.fragment.F16IHomeFragment;
+import com.study.fragment.F16IndexFragment;
 
 public class A16BottomTab extends AppCompatActivity {
 

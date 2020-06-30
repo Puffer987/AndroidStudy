@@ -1,4 +1,4 @@
-package com.study.view;
+package com.study.fragment;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -8,12 +8,10 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
 import com.study.R;
-import com.study.activity.A13DiyView;
 
 public class A13RoundButton extends View implements View.OnClickListener {
 

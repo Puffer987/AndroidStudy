@@ -2,8 +2,7 @@ package com.study.help;
 
 import androidx.fragment.app.Fragment;
 
-import com.study.R;
-import com.study.view.F18Item;
+import com.study.fragment.F18Item;
 
 public class A18DataGenerator {
     // public static final int []mTabRes = new int[]{R.drawable.sym_btn_selector,R.drawable.sym_btn_selector,R.drawable.sym_btn_selector,R.drawable.sym_btn_selector};

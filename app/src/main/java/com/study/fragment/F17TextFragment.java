@@ -1,4 +1,4 @@
-package com.study.view;
+package com.study.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import com.study.R;
 
-public class MyFragment extends Fragment {
+public class F17TextFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
     private String mParam1;
@@ -33,8 +33,8 @@ public class MyFragment extends Fragment {
         return view;
     }
 
-    public static MyFragment newInstance(String param1) {
-        MyFragment fragment = new MyFragment();
+    public static F17TextFragment newInstance(String param1) {
+        F17TextFragment fragment = new F17TextFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         fragment.setArguments(args);

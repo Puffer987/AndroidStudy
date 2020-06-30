@@ -8,7 +8,7 @@ import android.os.Bundle;
 
 import com.study.R;
 import com.study.adapter.A17ViewPagerAdapter;
-import com.study.view.F17TextFragment;
+import com.study.fragment.F17TextFragment;
 
 import java.util.ArrayList;
 import java.util.List;

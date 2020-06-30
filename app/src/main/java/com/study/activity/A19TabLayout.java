@@ -3,11 +3,10 @@ package com.study.activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.os.FileObserver;
 
 import com.google.android.material.tabs.TabLayout;
 import com.study.R;
-import com.study.view.F18Item;
+import com.study.fragment.F18Item;
 
 public class A19TabLayout extends AppCompatActivity {
 

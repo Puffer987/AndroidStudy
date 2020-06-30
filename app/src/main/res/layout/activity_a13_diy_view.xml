@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".activity.A13DiyView">
 
-    <com.study.view.A13RoundButton
+    <com.study.fragment.A13RoundButton
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_gravity="center"
