@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activity.A26Notification">
+
+    <Button
+        android:id="@+id/i26_notice0"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="通知等级none" />
+
+    <Button
+        android:id="@+id/i26_notice1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="通知等级min" />
+
+    <Button
+        android:id="@+id/i26_notice2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="通知等级low" />
+
+    <Button
+        android:id="@+id/i26_notice3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="通知等级default" />
+
+    <Button
+        android:id="@+id/i26_notice4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="通知等级high" />
+
+    <Button
+        android:id="@+id/i26_notice5"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="通知等级max" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <Button
+        android:id="@+id/i26_clear"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="清除通知" />
+
+
+</LinearLayout>

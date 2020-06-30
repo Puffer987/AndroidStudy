@@ -309,6 +309,15 @@
                 android:text="读取联系人"
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/notification"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="onClickBtn"
+                android:text="通知测试"
+                android:textAllCaps="false" />
+
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

@@ -25,6 +25,7 @@ import com.study.activity.A22Dialog;
 import com.study.activity.A23BroadcastActivity;
 import com.study.activity.A24RecyclerViewShu;
 import com.study.activity.A25ContentProvider;
+import com.study.activity.A26Notification;
 import com.study.activity.a01_calculator;
 import com.study.activity.a02_bigger;
 import com.study.activity.a03_about;
@@ -194,6 +195,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             }case R.id.content_provider: {
                 Intent i = new Intent(this, A25ContentProvider.class);
+                startActivity(i);
+                break;
+            }case R.id.notification: {
+                Intent i = new Intent(this, A26Notification.class);
                 startActivity(i);
                 break;
             }

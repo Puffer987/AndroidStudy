@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.VIBRATE" /> <!-- 往SDCard读写数据权限 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
@@ -16,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.A25ContentProvider"></activity>
+        <activity android:name=".activity.A26Notification"></activity>
+        <activity android:name=".activity.A25ContentProvider" />
         <activity android:name=".activity.A24RecyclerViewShu" />
         <activity android:name=".MVP.View.LoginActivity" />
         <activity android:name=".activity.A23BroadcastActivity" />
