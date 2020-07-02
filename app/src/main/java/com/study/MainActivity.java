@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ScrollView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,6 +27,10 @@ import com.study.activity.A23BroadcastActivity;
 import com.study.activity.A24RecyclerViewShu;
 import com.study.activity.A25ContentProvider;
 import com.study.activity.A26Notification;
+import com.study.activity.A27WebView;
+import com.study.activity.A28OkHttp;
+import com.study.activity.A29AsyncTaskActivity;
+import com.study.activity.A30HandlerActivity;
 import com.study.activity.a01_calculator;
 import com.study.activity.a02_bigger;
 import com.study.activity.a03_about;
@@ -35,6 +40,7 @@ import com.study.activity.a07_dynamicLayout;
 import com.study.activity.a08_file;
 import com.study.activity.a09_storage;
 import com.study.activity.a11ListView;
+import com.study.download.DownloadActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,6 +48,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ScrollView mScrollview = findViewById(R.id.scrollview);
+        mScrollview.post(new Runnable() {
+            public void run() {
+                mScrollview.fullScroll(View.FOCUS_DOWN);
+            }
+        });
     }
 
     @Override
@@ -189,20 +202,48 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(this, A23BroadcastActivity.class);
                 startActivity(i);
                 break;
-            } case R.id.mvp_login: {
+            }
+            case R.id.mvp_login: {
                 Intent i = new Intent(this, LoginActivity.class);
                 startActivity(i);
                 break;
-            }case R.id.content_provider: {
+            }
+            case R.id.content_provider: {
                 Intent i = new Intent(this, A25ContentProvider.class);
                 startActivity(i);
                 break;
-            }case R.id.notification: {
+            }
+            case R.id.notification: {
                 Intent i = new Intent(this, A26Notification.class);
                 startActivity(i);
                 break;
             }
+            case R.id.web_view: {
+                Intent i = new Intent(this, A27WebView.class);
+                startActivity(i);
+                break;
+            }
+            case R.id.ok_http: {
+                Intent i = new Intent(this, A28OkHttp.class);
+                startActivity(i);
+                break;
+            }
+            case R.id.download_text: {
+                Intent i = new Intent(this, DownloadActivity.class);
+                startActivity(i);
+                break;
+            } case R.id.progress_async_task: {
+                Intent i = new Intent(this, A29AsyncTaskActivity.class);
+                startActivity(i);
+                break;
+            }case R.id.progress_handler: {
+                Intent i = new Intent(this, A30HandlerActivity.class);
+                startActivity(i);
+                break;
+            }
         }
+
+
         return true;
     }
 }
