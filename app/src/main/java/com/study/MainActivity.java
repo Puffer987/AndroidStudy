@@ -41,6 +41,8 @@ import com.study.activity.a08_file;
 import com.study.activity.a09_storage;
 import com.study.activity.a11ListView;
 import com.study.download.DownloadActivity;
+import com.study.retrofit.CaiyunRealtimeWeatherActivity;
+import com.study.retrofit.iciba.IcibaActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -238,6 +240,14 @@ public class MainActivity extends AppCompatActivity {
                 break;
             }case R.id.progress_handler: {
                 Intent i = new Intent(this, A30HandlerActivity.class);
+                startActivity(i);
+                break;
+            }case R.id.retrofit_caiyun: {
+                Intent i = new Intent(this, CaiyunRealtimeWeatherActivity.class);
+                startActivity(i);
+                break;
+            }case R.id.retrofit_iciba: {
+                Intent i = new Intent(this, IcibaActivity.class);
                 startActivity(i);
                 break;
             }

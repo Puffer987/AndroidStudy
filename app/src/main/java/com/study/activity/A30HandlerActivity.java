@@ -32,7 +32,11 @@ public class A30HandlerActivity extends AppCompatActivity {
         public boolean handleMessage(@NonNull Message msg) {
             switch (msg.what) {
                 case 1:
-                    A30HandlerActivity.this.out.setText(msg.obj.toString());
+                    StringBuilder outStr = new StringBuilder();
+                    outStr.append("两个arg的和："+msg.arg1 + msg.arg2+"\n");
+                    outStr.append(msg.getData().getString("key")+"\n");
+                    outStr.append(msg.obj);
+                    A30HandlerActivity.this.out.setText(outStr);
                     break;
             }
             return false;
@@ -62,6 +66,11 @@ public class A30HandlerActivity extends AppCompatActivity {
 
                 Message msg = new Message();
                 msg.what = 1;
+                msg.arg1 = 422;
+                msg.arg2 = 666;
+                Bundle data = new Bundle();
+                data.putString("key","通过bundle传值");
+                msg.setData(data);
 
                 msg.obj = outStr;
                 uiHandler.sendMessage(msg);
@@ -75,29 +84,26 @@ public class A30HandlerActivity extends AppCompatActivity {
         progress.setMax(100);
         progress.show();
 
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                String text = in.getText().toString();
-                StringBuilder outStr = new StringBuilder();
-                for (int i = 0; i < 100; i++) {
-                    outStr.append(text).append(i + 1).append("\n");
-                    try {
-                        Thread.sleep(20);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    progress.setProgress(i + 1);
+        new Thread(() -> {
+            String text = in.getText().toString();
+            StringBuilder outStr = new StringBuilder();
+            for (int i = 0; i < 100; i++) {
+                outStr.append(text).append(i + 1).append("\n");
+                try {
+                    Thread.sleep(20);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
-                progress.dismiss();
-                Runnable runnable = new Runnable() {
-                    @Override
-                    public void run() {
-                        A30HandlerActivity.this.out.setText(outStr);
-                    }
-                };
-                uiHandler.post(runnable);
+                progress.setProgress(i + 1);
             }
+            progress.dismiss();
+            Runnable runnable = new Runnable() {
+                @Override
+                public void run() {
+                    A30HandlerActivity.this.out.setText(outStr);
+                }
+            };
+            uiHandler.post(runnable);
         }).start();
     }
 }

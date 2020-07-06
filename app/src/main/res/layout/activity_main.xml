@@ -336,6 +336,7 @@
                 android:onClick="onClickBtn"
                 android:text="OkHttp"
                 android:textAllCaps="false" />
+
             <Button
                 android:id="@+id/download_text"
                 android:layout_width="match_parent"
@@ -368,6 +369,29 @@
                     android:text="handler进度条"
                     android:textAllCaps="false" />
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/retrofit_iciba"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="Iciba"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/retrofit_caiyun"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="彩云"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

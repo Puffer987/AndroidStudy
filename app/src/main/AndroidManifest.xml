@@ -18,8 +18,12 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".activity.A30HandlerActivity"></activity>
+
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".retrofit.iciba.IcibaActivity"></activity>
+        <activity android:name=".retrofit.CaiyunRealtimeWeatherActivity" />
+        <activity android:name=".activity.A30HandlerActivity" />
         <activity android:name=".activity.A29AsyncTaskActivity" />
         <activity android:name=".download.DownloadActivity" />
 

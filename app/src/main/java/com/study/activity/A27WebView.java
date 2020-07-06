@@ -19,7 +19,5 @@ public class A27WebView extends AppCompatActivity {
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("https://www.baidu.com/");
-
-
     }
 }

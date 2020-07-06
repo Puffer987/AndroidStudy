@@ -12,6 +12,7 @@ import com.study.R;
 
 import java.io.IOException;
 
+import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Request.Builder;
@@ -37,8 +38,9 @@ public class A28OkHttp extends AppCompatActivity {
                 Request request = new Request.Builder()
                         .url("http://guolin.tech/api/bing_pic")
                         .build();
+                Call call = client.newCall(request);
                 try {
-                    Response response = client.newCall(request).execute();
+                    Response response =call.execute();
                     String responseData = response.body().string();
                     showResponse(responseData);
                 } catch (IOException e) {
@@ -55,6 +57,5 @@ public class A28OkHttp extends AppCompatActivity {
                 textView.setText(responseData);
             }
         });
-
     }
 }
