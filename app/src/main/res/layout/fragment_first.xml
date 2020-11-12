@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/cal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="计算器"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/bigger"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="放大"
+                    android:textAllCaps="false" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="start"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="-1"
+                    android:singleLine="true"
+                    android:text="@string/textview_run" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/vibrate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="振动"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/pcMuscle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="振动码转换"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/dynamicLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="onClickBtn"
+                android:text="点击添加一列"
+                android:textAllCaps="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/file"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="文件创建"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/storage"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="存储文件"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="ListView"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/list_view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="ListView2"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/grid_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="GridView"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/recycle_view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="RecyclerView竖"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/recycle_view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="RecyclerView横"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/recycle_view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="RecyclerView瀑布"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/rv_decoration"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="onClickBtn"
+                android:text="Recycler View Decoration"
+                android:textAllCaps="false" />
+            <Button
+                android:id="@+id/tl_2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="onClickBtn"
+                android:text="各种TabLayout"
+                android:textAllCaps="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/tab_button"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="按鈕切換tab"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/tab_viewpage"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="viewPage"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/tl_1"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="Tablayout"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/tab_u3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="onClickBtn"
+                android:text="tab的实现TabLayout + ViewPager + Fragment"
+                android:textAllCaps="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/content_provider"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="读取联系人"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/permission"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="动态权限申请"
+                    android:textAllCaps="false" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/dialog"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="onClickBtn"
+                android:text="对话框"
+                android:textAllCaps="false" />
+
+
+            <Button
+                android:id="@+id/mvp_login"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="onClickBtn"
+                android:text="Mvp登陆"
+                android:textAllCaps="false" />
+
+
+            <Button
+                android:id="@+id/notification"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="onClickBtn"
+                android:text="通知测试"
+                android:textAllCaps="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/progress_async_task"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="AsyncTask进度条"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/progress_handler"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickBtn"
+                    android:text="handler进度条"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

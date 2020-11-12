@@ -18,20 +18,14 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".retrofit.iciba.IcibaActivity"></activity>
+        <activity android:name=".activity.A24RecycleViewDecoration"></activity>
+        <activity android:name=".activity.A31DiyInRectActivity" />
         <activity android:name=".retrofit.CaiyunRealtimeWeatherActivity" />
         <activity android:name=".activity.A30HandlerActivity" />
         <activity android:name=".activity.A29AsyncTaskActivity" />
         <activity android:name=".download.DownloadActivity" />
-
-        <service
-            android:name=".download.DownloadService"
-            android:enabled="true"
-            android:exported="true" />
-
         <activity android:name=".activity.A28OkHttp" />
         <activity android:name=".activity.A27WebView" />
         <activity android:name=".activity.A26Notification" />
@@ -47,14 +41,6 @@
         <activity android:name=".activity.A17ViewPagerTab" />
         <activity android:name=".activity.A16BottomTab" />
         <activity android:name=".activity.A15TestServiceActivity" />
-
-        <service
-            android:name=".activity.S15PlayerService"
-            android:label="startService音乐播放服务" />
-        <service
-            android:name=".activity.S15MyService"
-            android:label="Service启动方式测试服务" />
-
         <activity android:name=".activity.A15PlayerServiceActivity" />
         <activity android:name=".activity.A14FragmentActivity" />
         <activity android:name=".activity.A13DiyView" />
@@ -72,12 +58,32 @@
         <activity android:name=".activity.a02_bigger" />
         <activity android:name=".activity.a01_calculator" />
         <activity android:name=".MainActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".MainActivity2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".download.DownloadService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".activity.S15PlayerService"
+            android:label="startService音乐播放服务" />
+        <service
+            android:name=".activity.S15MyService"
+            android:label="Service启动方式测试服务" />
     </application>
 
 </manifest>

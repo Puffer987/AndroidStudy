@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".F03Fragment">
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/web_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="onClickBtn"
+                android:text="WebView测试"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/ok_http"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="onClickBtn"
+                android:text="OkHttp"
+                android:textAllCaps="false" />
+
+
+        <Button
+            android:id="@+id/diy_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:onClick="onClickBtn"
+            android:text="自定义控件"
+            android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/diy_in_rect"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="onClickBtn"
+                android:text="test"
+                android:textAllCaps="false" />
+    </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
